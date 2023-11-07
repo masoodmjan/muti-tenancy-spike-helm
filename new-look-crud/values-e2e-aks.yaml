@@ -12,7 +12,7 @@ ingress:
         - path: /
           pathType: Prefix
 
-  tls: []
+  tls:
    - secretName:  e2e-fabric-do-tls
      hosts:
        - e2e-fabric-do.dcp-np.newlook.cloud
