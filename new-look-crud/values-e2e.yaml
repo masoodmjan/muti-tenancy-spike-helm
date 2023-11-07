@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: NodePort
   port: 8082
+  httpsport: 443
 
 container:
   port: 8080
