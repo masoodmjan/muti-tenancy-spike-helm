@@ -7,7 +7,7 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: 'true'
     appgw.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
-    - host: dev-fabric-nl.aks
+    - host: e2e-fabric-nl.aks
       paths:
         - path: /
           pathType: Prefix
@@ -16,3 +16,4 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+
