@@ -11,5 +11,9 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port:  {{ .Values.service.httpsport }}
+      protocol: TCP
+      targetPort: http
+      name: https
   selector:
     {{- include "new-look-crud.selectorLabels" . | nindent 4 }}
