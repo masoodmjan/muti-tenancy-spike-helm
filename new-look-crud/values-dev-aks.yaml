@@ -7,7 +7,7 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: 'true'
     appgw.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
-    - host: nl-crud-dev.dcp-np.newlook.cloud
+    - host: dev-fabric-do.dcp-np.newlook.cloud
       paths:
         - path: /
           pathType: Prefix
@@ -15,4 +15,4 @@ ingress:
   tls: 
    - secretName: dev-fabric-do-tls
      hosts:
-       - nl-crud-dev.dcp-np.newlook.cloud
+       - dev-fabric-do.dcp-np.newlook.cloud
