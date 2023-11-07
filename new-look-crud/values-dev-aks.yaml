@@ -13,6 +13,6 @@ ingress:
           pathType: Prefix
 
   tls: 
-   - secretName: argocd-tls
+   - secretName: dev-fabric-nl-tls
      hosts:
        - dev-fabric-nl.aks
