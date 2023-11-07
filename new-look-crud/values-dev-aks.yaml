@@ -12,7 +12,7 @@ ingress:
         - path: /
           pathType: Prefix
 
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  tls: 
+   - secretName: argocd-tls
+     hosts:
+       - dev-fabric-nl.aks
