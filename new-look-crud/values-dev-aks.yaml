@@ -7,12 +7,12 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: 'true'
     appgw.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
-    - host: dev-fabric-nl.aks
+    - host: dev-fabric-do.dcp-np.newlook.cloud
       paths:
         - path: /
           pathType: Prefix
 
   tls: 
-   - secretName: dev-fabric-nl-tls
+   - secretName: dev-fabric-do-tls
      hosts:
-       - dev-fabric-nl.aks
+       - dev-fabric-do.dcp-np.newlook.cloud

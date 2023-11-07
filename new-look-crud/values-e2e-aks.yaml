@@ -7,13 +7,13 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: 'true'
     appgw.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
-    - host: e2e-fabric-nl.aks
+    - host: e2e-fabric-do.dcp-np.newlook.cloud
       paths:
         - path: /
           pathType: Prefix
 
   tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+   - secretName:  e2e-fabric-do-tls
+     hosts:
+       - e2e-fabric-do.dcp-np.newlook.cloud
 
