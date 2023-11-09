@@ -3,7 +3,7 @@ ingress:
   enabled: true
   className: "azure-application-gateway"
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-dev
+    cert-manager.io/cluster-issuer: letsencrypt-staging
     acme.cert-manager.io/http01-edit-in-place: 'true'
     appgw.ingress.kubernetes.io/ssl-redirect: 'true'
   hosts:
