@@ -4,6 +4,9 @@
 
 replicaCount: 1
 
+tenant:
+  name: e2e-fabric
+
 image:
   repository: masoodmjan/newlook-crud-exercise
   pullPolicy: Always
@@ -13,6 +16,14 @@ image:
 imagePullSecrets: []
 nameOverride: "newlook-crud-exercise"
 fullnameOverride: "newlook-crud-exercise-chart"
+
+
+secretProvider:
+  create: true
+  keyVaultName: 'kv-do-fabric-uks-09'
+  tenantId: 'dda4d11f-c29d-4d64-8f61-aa4041ca36d9'
+  userAssignedIdentityID: '655fb661-c0c5-4c08-a9f6-97d0f1eee629'
+  subscriptionId: '17b8a21b-16fd-4cb2-b3f0-5896a179475b'
 
 serviceAccount:
   # Specifies whether a service account should be created
