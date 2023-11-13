@@ -33,7 +33,24 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+          - name: secrets-store-inline
+            mountPath: "/mnt/secrets-store"
+            readOnly: true
           ports:
             - name: http
               containerPort: {{ .Values.container.port }}
               protocol: TCP
+          env:
+          - name: "AMPLIENCE_API_URI"
+            valueFrom:
+              secretKeyRef:
+                key:  {{ .Values.tenant.name }}-AMPLIENCE-API-URI
+                name: {{ include "new-look-crud.name" . }}-secrets
+      volumes:
+      - name: secrets-store-inline
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: {{ include "new-look-crud.name" . }}-kv-secrets
