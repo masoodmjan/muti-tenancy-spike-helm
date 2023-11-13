@@ -1,0 +1,10 @@
+apiVersion: capsule.clastix.io/v1beta2
+kind: Tenant
+metadata:
+  name: dev-fabric
+spec:
+  owners:
+  - name: aa5aaa36-c474-4602-bd2d-85364dd5753c
+    kind: Group
+  namespaceOptions:
+    quota: 6

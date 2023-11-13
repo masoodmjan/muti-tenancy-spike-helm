@@ -1,0 +1,13 @@
+
+# Manager Options
+manager:
+  # Additional Capsule Controller Options
+  options:
+    # -- Boolean, enforces the Tenant owner, during Namespace creation, to name it using the selected Tenant name as prefix, separated by a dash
+    forceTenantPrefix: true
+    # -- Override the Capsule user groups
+    capsuleUserGroups: ["b68850e2-1d0d-4620-add7-22912cdd6b5c"]
+
+
+
+

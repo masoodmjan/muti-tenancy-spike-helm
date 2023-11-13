@@ -1,0 +1,10 @@
+apiVersion: capsule.clastix.io/v1beta2
+kind: Tenant
+metadata:
+  name: e2e-fabric
+spec:
+  owners:
+  - name: ee23a18f-2a67-4d14-9039-6fe28e106d07
+    kind: Group
+  namespaceOptions:
+    quota: 3
