@@ -45,7 +45,7 @@ spec:
           - name: "AMPLIENCE_API_URI"
             valueFrom:
               secretKeyRef:
-                key:  {{ .Values.tenant.name }}-AMPLIENCE-API-URI
+                key:  AMPLIENCE-API-URI
                 name: {{ include "new-look-crud.name" . }}-secrets
       volumes:
       - name: secrets-store-inline
