@@ -20,9 +20,9 @@ fullnameOverride: "newlook-crud-exercise-chart"
 
 secretProvider:
   create: true
-  keyVaultName: 'kv-do-fabric-uks-09'
+  keyVaultName: 'kv-do-fabric-uks-71'
   tenantId: 'dda4d11f-c29d-4d64-8f61-aa4041ca36d9'
-  userAssignedIdentityID: '1ecd419d-0416-4752-a979-6c3b1d37022c'
+  userAssignedIdentityID: '61a0bbf3-2735-4a47-90d3-254a7c2dbf9c'
   subscriptionId: '17b8a21b-16fd-4cb2-b3f0-5896a179475b'
 
 serviceAccount:
